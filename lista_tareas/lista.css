@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #696969;
+}
+#contenedor{
+    width: 350px;
+    height: 300px;
+    background-color: #7FFFD4;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+#contenedor__hijo1{
+    display: flex;
+    align-items: center;
+}
+#contenedor__hijo1 h2{
+    flex-grow: 1;
+    font-family: sans-serif;
+}
+#contenedor__hijo1 img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+a{
+    margin-top: 10px;
+}
+ul{
+    margin: 0;
+    padding-left: 28px;
+}
