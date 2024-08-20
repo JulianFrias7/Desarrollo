@@ -32,7 +32,7 @@ fetch(URL)
                 </div>
             `;
         });
-        contenedor.innerHTML = datos;  // Asignamos los datos una vez que están todos concatenados
+        contenedor.innerHTML = datos;
     })
     .catch(err => console.error(err));
 
