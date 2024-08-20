@@ -13,7 +13,7 @@ header{
     justify-content: space-between;
     align-items: center;
     height: 80px;
-    background-color: aqua;
+    background-color: #0288D1;
     padding: 0px 15px;
 }
 .titulo_principal{
@@ -21,6 +21,7 @@ header{
     padding-left: 0px;
     font-size: 1.2em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #1A237E;
 }
 .img_perfil, .img_busqueda, .img_carrito{
     width: 11vw;
@@ -52,92 +53,126 @@ header{
 }
 .informacion h2{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 2em;
-    color: rgb(255, 255, 255);
+    font-size: 2.4em;
+    color: #FFFFFF;
     text-align: center;
     padding-top: 15px;
-    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    text-shadow: 3px 3px 5px rgb(0, 0, 0, 0.7);
 }
 .informacion p{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 18;
-    color: #E8E2E2;
+    font-size: 1.1em;
+    color: #E0E0E0;
     text-align: center;
     padding: auto;
     margin: 5px 10px 10px 10px;
-    font-weight: lighter;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 .informacion button{
+    color: #FFFFFF;
     width: 170px;
     height: 55px;
     border-radius: 10px;
-    background-color: #E8E2E2;
+    background: linear-gradient(135deg, #1E88E5, #42A5F5);
+    /*background-color: #1E88E5;*/
     border: none;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
-    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 .informacion button:hover{
-    background-color: aqua;
+    /*background-color: #1565C0;*/
+    background: linear-gradient(135deg, #1565C0, #1E88E5);
+    transform: translateY(-2px);
     cursor: pointer;
 }
-.categorias{
+.productos{
     height: auto;
-    background-color: gray;
+    background-color: #F3F4F6;
 }
-.categorias h3{
+.productos h3{
     text-align: center;
     padding: 10px;
     letter-spacing: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-.contenedor_categorias{
+.contenedor_productos{
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+    background-color: #dfe2f6;
 }
 .producto{
-    width: 75%;
-    height: 200px;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    background-color: #FFFFFF;
+    box-shadow:  #B0BEC5 0px 0px 10px;
     margin: 10px;
-    margin-left: 50px;
+    margin-left: 10px;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(65, 13, 13, 0.1);
     text-align: center;
-    overflow: hidden;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 3px;
-
-
 }
-.producto_informacion{
-    margin-left: auto;
 
+.producto_informacion{
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.producto_informacion button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    /*background-color: #E8E2E2;*/
+    background: linear-gradient(135deg, #E57373, #EF5350);
+    border: none;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s ease, transform 0.3s ease;
+    color: #FFFFFF;
+    margin-right: 16px;
+}
+.producto_informacion button:hover {
+    background: linear-gradient(135deg, #D32F2F, #E57373); /* Cambia el degradado en hover */
+    transform: translateY(-2px); /* Efecto de elevación en hover */
+    cursor: pointer;
 }
 .producto_informacion h3{
+    color: #1A237E;
     letter-spacing: 3px;
-    margin-bottom: 50px;
+    padding-top: 10px;
+    margin-bottom: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-top: -10px;
-    margin-left: 70px;
+    text-align: center;
+    
 }
-#caja1{
-    background-image: url("../imagenes/bebidas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.producto_informacion p{
+    color: #424242;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: start;
 }
-#caja3, #caja4{
-    margin-top: 15px;
+.producto img{
+    margin-top: 0px;
+    width: 100%;
+    height: auto;
 }
-#caja1, #caja2{
-    margin-top: 15px;
+.producto h2, p{
+    margin: 10px 0px;
 }
+
 .lista_categorias a{
     text-decoration: none;
     color: #1E201E;
@@ -147,28 +182,8 @@ header{
     font-weight: bold;
 }
 
-#caja3{
-    background-image: url("../imagenes/snacks.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#caja2{
-    background-image: url("../imagenes/postre.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#caja4{
-    background-image: url("../imagenes/frutas.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
 /* Estilos para la ventana emergente */
-.modal {
+.carrito {
     display: none; /* Oculto por defecto */
     position: fixed;
     z-index: 1000;
@@ -179,7 +194,7 @@ header{
     background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
 }
 
-.modal-content {
+.contenido_carrito {
     background-color: #fefefe;
     margin: 60px auto; /* Centrado verticalmente y horizontalmente */
     padding: 20px;
@@ -191,13 +206,14 @@ header{
     position: relative;
 }
 
-.closeBtn {
+.cerrar_ventana{
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
 }
+
 
 
 @media (width> 550px) {
@@ -278,3 +294,4 @@ header{
         height: 70px;
     }
 }
+

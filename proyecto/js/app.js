@@ -1,39 +1,38 @@
-const cartIcon = document.querySelector(".img_carrito");
-const cartModal = document.getElementById("cartModal");
-const closeBtn = document.querySelector(".closeBtn");
-const contenedor = document.querySelector(".contenedor_categorias");
+const imagenCarrito = document.querySelector(".img_carrito");
+const contenedorCarrito = document.getElementById("contenedor_carrito");
+const cerrarVentana = document.querySelector(".cerrar_ventana");
+const contenedor = document.querySelector(".contenedor_productos");
     // Mostrar la ventana emergente al hacer clic en el ícono del carrito
-cartIcon.addEventListener("click", function() {
-    cartModal.style.display = "block";
+imagenCarrito.addEventListener("click", function() {
+    contenedorCarrito.style.display = "block";
 });
 
     // Cerrar la ventana emergente al hacer clic en la 'X'
-closeBtn.addEventListener("click", function() {
-    cartModal.style.display = "none";
+cerrarVentana.addEventListener("click", function() {
+    contenedorCarrito.style.display = "none";
 });
 
 
-const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos'
+const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos';
 fetch(URL)
     .then(res => res.json())
     .then(data => {
         let datos = '';
         data.forEach(producto => {
             datos += `
-                <div class="producto" style="background-image: url('${producto.imagen}');">
+                <div class="producto">
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
                     <div class="producto_informacion">
                         <h3>${producto.nombre}</h3>
                         <p>Precio: $${producto.precio}</p>
-                        <p>Categoria: ${producto.categoria}</p>
+                        <p>Categoría: ${producto.categoria}</p>
                         <p>Stock: ${producto.stock}</p>
-                        <p>Descripción: ${producto.descripcion}</p>
                         <button onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
                     </div>
                 </div>
             `;
         });
-        contenedor.innerHTML = datos;
+        contenedor.innerHTML = datos;  // Asignamos los datos una vez que están todos concatenados
     })
-    .catch(err => console.log(err));
+    .catch(err => console.error(err));
 
-    //<img src="${producto.imagen}" alt="${producto.nombre}"></img>
