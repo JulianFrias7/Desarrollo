@@ -1,0 +1,280 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.buscar_producto{
+    display: none;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: aqua;
+    padding: 0px 15px;
+}
+.titulo_principal{
+    display: flex;
+    padding-left: 0px;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.img_perfil, .img_busqueda, .img_carrito{
+    width: 11vw;
+    height: 4.9vh;
+    margin-top: 7px;
+    margin-left: 5px;
+}
+.presentacion{
+    height: 270px;
+    background-image: linear-gradient(
+        0deg,
+        rgba(56, 47, 47, 0.5),
+        rgba(73, 71, 71, 0.5)
+    ) 
+    ,url("../imagenes/fondo_compras.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.informacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 7px 3px 0px 3px;
+    max-width: 100%;
+}
+.informacion h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 15px;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.informacion p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18;
+    color: #E8E2E2;
+    text-align: center;
+    padding: auto;
+    margin: 5px 10px 10px 10px;
+    font-weight: lighter;
+}
+.informacion button{
+    width: 170px;
+    height: 55px;
+    border-radius: 10px;
+    background-color: #E8E2E2;
+    border: none;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    box-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.informacion button:hover{
+    background-color: aqua;
+    cursor: pointer;
+}
+.categorias{
+    height: auto;
+    background-color: gray;
+}
+.categorias h3{
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.contenedor_categorias{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+.producto{
+    width: 75%;
+    height: 200px;
+    background-color: white;
+    margin: 10px;
+    margin-left: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(65, 13, 13, 0.1);
+    text-align: center;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 3px;
+
+
+}
+.producto_informacion{
+    margin-left: auto;
+
+}
+.producto_informacion h3{
+    letter-spacing: 3px;
+    margin-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: -10px;
+    margin-left: 70px;
+}
+#caja1{
+    background-image: url("../imagenes/bebidas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#caja3, #caja4{
+    margin-top: 15px;
+}
+#caja1, #caja2{
+    margin-top: 15px;
+}
+.lista_categorias a{
+    text-decoration: none;
+    color: #1E201E;
+    font-size: 1.1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+
+#caja3{
+    background-image: url("../imagenes/snacks.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#caja2{
+    background-image: url("../imagenes/postre.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#caja4{
+    background-image: url("../imagenes/frutas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos para la ventana emergente */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); /* Fondo oscuro con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 60px auto; /* Centrado verticalmente y horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: 280px;
+    max-width: 480px; /* Ancho máximo */
+    border-radius: 10px;
+    position: relative;
+}
+
+.closeBtn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media (width> 550px) {
+    /* Mostrar barra de navegación en pantallas más grandes */
+    .buscar_producto{
+        display: flex; 
+        margin-right: 15px; /* Espacio entre la lupa y el menú */
+        align-items: center; /* Alinear verticalmente en el centro */
+        flex-grow: 2;
+        width: 35vw;
+        height: 30px;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    /* Ajustar el tamaño de las imágenes en pantallas más grandes */
+    .img_perfil, .img_busqueda, .img_carrito{
+        width: clamp(30px, 6vw, 40px); /* Establecer un ancho máximo de 60px */
+        height: 40px; /* Mantener la proporción de la imagen */
+        max-height: 50px;
+    }
+
+    /* Opcional: Reducir el tamaño del contenedor de navegación si es necesario */
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .img_busqueda {
+        margin-right: 2vw;
+    }
+    .titulo_principal h1{
+        margin-right: 20px;
+    }
+    input{
+        width: 100vw;
+        height: 34px;
+        border-radius: 10px;
+        border: none;
+        padding-left: 30px;
+        margin-left: 10px;
+    }
+    .img_perfil{
+        margin-left: 8vw;
+    }
+}
+@media(width> 510px){
+    .lista_categorias{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(width> 742px){
+    button{
+        margin-top: 15px;
+    }
+    p{
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 1.3;
+    }
+    .lista_categorias a{
+        font-size: 13px;
+    }
+}
+@media(width> 1005px){
+    .presentacion{
+        height: 350px;
+    }
+    p{
+        max-width: 600px;
+    }
+    .informacion button{
+        width: 250px;
+        height: 70px;
+    }
+}

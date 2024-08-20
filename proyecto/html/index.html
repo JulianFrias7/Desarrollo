@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Simulador</title>
+</head>
+<body>
+    <header class="encabezado">
+        <div class="titulo_principal">
+            <h1>Mercado</h1>
+        </div>
+        <nav>
+            <input type="text" name="nombre_producto" id="" placeholder="Buscar producto..." class="buscar_producto">
+            <a href=""><img src="../imagenes/busqueda.png" alt="" class="img_busqueda"></a> 
+            <a href="#"><img src="../imagenes/perfil.png" alt="" class="img_perfil"></a>
+            <a href="#"><img src="../imagenes/carrito.png" alt=""  class="img_carrito"></a>
+        </nav>
+    </header>
+
+    <!-- Ventana emergente para el carrito -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">X</span>
+            <h2>Carrito de Compras</h2>
+            <ul id="cartItems">
+                <!-- Aquí se mostrarán los productos -->
+            </ul>
+        </div>
+    </div>
+
+    <section class="presentacion">
+        <div class="fondo_productos">
+            <img src="../imagenes/fondo_compras.png" alt="">
+        </div>
+        <div class="informacion">
+            <h2 class="animate__animated animate__bounce animate__zoomInDown">SIMULADOR DE COMPRAS</h2>
+            <p class="animate__animated animate__bounce animate__zoomIn">
+                Bienvenido a mi simulador de compras, una herramienta interactiva para ofrecer una experiencia de compra virtual,
+                explora variedades de productos y agregalos a tu carrito virtual y simula el proceso de compra =]
+            </p>
+            <button>Ir a mi carrito</button> 
+        </div>
+    </section>
+
+    <section class="categorias">
+        <div>
+            <h3>CATEGORIAS</h3>
+        </div>
+        <div class="contenedor_categorias">
+            <!-- Aquí puedes agregar tus categorías de productos -->
+        </div>
+    </section>
+
+    <!-- Aquí puedes agregar tu script JavaScript -->
+    <script src="../js/app.js"></script>
+</body>
+</html>
