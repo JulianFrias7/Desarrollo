@@ -4,11 +4,34 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.buscar_producto{
-    display: none;
+.buscar_producto {
+    display: none; 
+    position: fixed;
+    margin-left: -202px;
+    margin-top: 60px;
+    z-index: 1;
+    width: 100%;
+    height: 40px;
 }
-
+.boton_buscar, .boton_cerrar{
+    display: none;
+    justify-content: center;
+    position: fixed;
+    height: 40px;
+    width: 40%;
+    z-index: 2;
+    margin-top: 100px;
+}
+.boton_buscar{
+    width: 180px;
+    margin-left: -203px;
+    margin-right: 10px;
+}
+.boton_cerrar{
+    width: 173px;
+    margin-right: 180px;
+    margin-left: -20px;
+}
 header{
     display: flex;
     justify-content: space-between;
@@ -234,11 +257,10 @@ header{
 }
 
 @media (width> 550px) {
-    /* Mostrar barra de navegación en pantallas más grandes */
     .buscar_producto{
         display: flex; 
-        margin-right: 15px; /* Espacio entre la lupa y el menú */
-        align-items: center; /* Alinear verticalmente en el centro */
+        margin-right: 15px; 
+        align-items: center; 
         flex-grow: 2;
         width: 35vw;
         height: 30px;
@@ -248,14 +270,13 @@ header{
         justify-content: space-between;
     }
 
-    /* Ajustar el tamaño de las imágenes en pantallas más grandes */
+    
     .img_perfil, .img_busqueda, .img_carrito{
-        width: clamp(30px, 6vw, 40px); /* Establecer un ancho máximo de 60px */
-        height: 40px; /* Mantener la proporción de la imagen */
+        width: clamp(30px, 6vw, 40px); 
+        height: 40px; 
         max-height: 50px;
     }
 
-    /* Opcional: Reducir el tamaño del contenedor de navegación si es necesario */
     nav {
         display: flex;
         align-items: center;
