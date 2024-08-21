@@ -2,6 +2,7 @@
 const imagenCarrito = document.querySelector(".img_carrito");
 const contenedorCarrito = document.getElementById("contenedor_carrito");
 const cerrarVentana = document.querySelector(".cerrar_ventana");
+const botonAgregarCarrito = document.querySelector(".agregar_carrito");
 
 //para desktop
 const contenedorProductos = document.querySelector(".contenedor_productos"); //donde van los productos
@@ -20,7 +21,17 @@ const botonCerrar = document.querySelector('.boton_cerrar')
 //para moviles
 const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos';
 
-
+function agregarCarrito(){
+    botonAgregarCarrito.addEventListener('click', function(){
+        fetch(URL)
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(producto => {
+                console.log(producto.id)
+            })
+        })
+    })
+}
 function abrirCerrarVentanaCarrito() {
     imagenCarrito.addEventListener("click", function() {
         contenedorCarrito.style.display = "block";
@@ -81,7 +92,7 @@ function mostrarProductos() {
                         <p>Precio: $${producto.precio}</p>
                         <p>Categoría: ${producto.categoria}</p>
                         <p>Stock: ${producto.stock}</p>
-                        <button onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+                        <button class="agregar_carrito">Agregar al carrito</button>
                     </div>
                 </div>
             `;
@@ -113,7 +124,7 @@ function realizarBusqueda(buscador) {
                                 <p>Precio: $${producto.precio}</p>
                                 <p>Categoría: ${producto.categoria}</p>
                                 <p>Stock: ${producto.stock}</p>
-                                <button onclick="agregarAlCarrito(${producto.id})">Agregar al carrito</button>
+                                <button class="agregar_carrito">Agregar al carrito</button>
                             </div>
                         </div>
                     `;
@@ -151,6 +162,7 @@ function main() {
     mostrarProductos();
     buscarProductoOCategoria();
     abrirVentanaBusqueda();
+    agregarCarrito()
 }
 
 main()
