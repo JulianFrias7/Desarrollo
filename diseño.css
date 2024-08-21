@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    }
+header{
+    height: 10vh;
+    background-color: skyblue;
+}
+header h1{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin: 0;
+    padding: 10px;
+}
+section{
+    padding: 2vw;
+}
+section p{
+    font-size: 1.2rem;
+}
+.responsive-div{
+    width: max(300px, 50vw);
+    height: 20vh;
+    background-color: coral;
+    padding: 10px;
+    box-sizing: border-box;
+}
+footer{
+    height: 5vh;
+    background-color: lightgrey;
+    padding: 5px;
+}
+footer p{
+    font-size: min(2vw, 1rem);
+    margin: 0;
+}

@@ -1,5 +1,4 @@
 localStorage.clear()
-var tarea = null
 let añadir = document.querySelector('#link_imagen')
 let lista = document.querySelector('ul')
 const tareas = {
@@ -9,7 +8,11 @@ const tareas = {
 }
 //terminar de hacer el local storage para las tareas hechas y borradas
 añadir.addEventListener('click', function(){
-    tarea = prompt('Ingrese la nueva tarea')
+    let tarea = prompt('Ingrese la nueva tarea')
+    while(!tarea || tarea.trim() === ''){
+        alert("La tarea no puede estar vacia, ingrese una tarea valida")
+        tarea = prompt('Ingrese la nueva tarea')
+    }
     let nuevaTarea = document.createElement('li')
     nuevaTarea.textContent = tarea
     lista.appendChild(nuevaTarea)
