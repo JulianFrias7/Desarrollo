@@ -25,13 +25,6 @@
     display: flex;
     width: 100%;
 }
-/*.contenido_buscador .boton_buscar{
-    width: 50%;
-}
-.contenedor_buscador .boton_cerrar{
-    width: 175px;
-    margin-left: 0px;
-}*/
 .buscar_producto{
     display: none;
 }

@@ -67,61 +67,6 @@ window.addEventListener('resize', function() {
     }
 });
 
-/*function abrirVentanaBusqueda() {
-    if(window.innerWidth < 550){ 
-        imagenBusqueda.addEventListener('click', function() {
-            if (contenedorBusqueda.style.display === 'none' || contenedorBusqueda.style.display === '') {
-                contenedorBusqueda.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-            }
-        });
-
-        botonCerrar.addEventListener('click', function() {
-            contenedorBusqueda.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        });
-
-        botonBuscar.addEventListener('click', function() {
-            realizarBusqueda(buscadorMovil);
-        });
-    } else{
-        imagenBusqueda.addEventListener('click', function() {
-            if(window.innerWidth > 550){
-                buscadorMovil.style.display = 'block';
-                contenedorBusqueda.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            }
-        });
-    }
-}*/
-
-
-
-
-
-/*function abrirVentanaBusqueda() {
-    imagenBusqueda.addEventListener("click", function() {
-        if (barraBusqueda.style.display === 'none' || barraBusqueda.style.display === '') {
-            barraBusqueda.style.display = 'block';
-            botonBusqueda.style.display = 'inline-block';  
-            botonCerrar.style.display = 'inline-block'; 
-            document.body.style.overflow = 'hidden'; 
-        }
-    });
-
-    botonBusqueda.addEventListener('click', function(){
-        realizarBusqueda();
-    })
-
-    botonCerrar.addEventListener('click', function() {
-        barraBusqueda.style.display = 'none';
-        botonBusqueda.style.display = 'none';  
-        botonCerrar.style.display = 'none';  
-        document.body.style.overflow = 'auto';
-    });
-}*/
-
-
 function mostrarProductos() {
     fetch(URL)
     .then(res => res.json())
