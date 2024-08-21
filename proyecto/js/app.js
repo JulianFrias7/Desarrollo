@@ -2,12 +2,22 @@
 const imagenCarrito = document.querySelector(".img_carrito");
 const contenedorCarrito = document.getElementById("contenedor_carrito");
 const cerrarVentana = document.querySelector(".cerrar_ventana");
-const contenedor = document.querySelector(".contenedor_productos");
-const buscador = document.querySelector('.buscar_producto')
-const imagenBusqueda = document.querySelector('.img_busqueda')
-const barraBusqueda = document.querySelector('.buscar_producto')
-const botonBusqueda = document.querySelector('.boton_buscar')
+
+//para desktop
+const contenedorProductos = document.querySelector(".contenedor_productos"); //donde van los productos
+const buscador = document.querySelector('.buscar_producto') //el input de buscar producto
+const imagenBusqueda = document.querySelector('.img_busqueda') //imagen de busqueda
+
+//para moviles
+const contenedorBusqueda = document.querySelector('.contenedor_buscador')
+const buscadorMovil= document.querySelector('.buscador')
+const botonBuscar = document.querySelector('.boton_buscar')
 const botonCerrar = document.querySelector('.boton_cerrar')
+//const barraBusqueda = document.querySelector('.buscar_producto')
+//const botonBusqueda = document.querySelector('.boton_buscar')
+//const botonCerrar = document.querySelector('.boton_cerrar')
+
+//para moviles
 const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos';
 
 
@@ -23,6 +33,73 @@ function abrirCerrarVentanaCarrito() {
 
 
 function abrirVentanaBusqueda() {
+    imagenBusqueda.addEventListener('click', function() {
+        if (window.innerWidth < 550) {
+            // para moviles
+            if (contenedorBusqueda.style.display === 'none' || contenedorBusqueda.style.display === '') {
+                buscadorMovil.style.display = 'block';
+                contenedorBusqueda.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        } else {
+            // para pantallas grandes
+            contenedorBusqueda.style.display = 'none';
+            buscadorMovil.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    botonCerrar.addEventListener('click', function() {
+        contenedorBusqueda.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    botonBuscar.addEventListener('click', function() {
+        realizarBusqueda(buscadorMovil);
+    });
+}
+
+// evento cuando el tamaño del navegador cambia
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 550) {
+        contenedorBusqueda.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+
+/*function abrirVentanaBusqueda() {
+    if(window.innerWidth < 550){ 
+        imagenBusqueda.addEventListener('click', function() {
+            if (contenedorBusqueda.style.display === 'none' || contenedorBusqueda.style.display === '') {
+                contenedorBusqueda.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        botonCerrar.addEventListener('click', function() {
+            contenedorBusqueda.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        botonBuscar.addEventListener('click', function() {
+            realizarBusqueda(buscadorMovil);
+        });
+    } else{
+        imagenBusqueda.addEventListener('click', function() {
+            if(window.innerWidth > 550){
+                buscadorMovil.style.display = 'block';
+                contenedorBusqueda.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+}*/
+
+
+
+
+
+/*function abrirVentanaBusqueda() {
     imagenBusqueda.addEventListener("click", function() {
         if (barraBusqueda.style.display === 'none' || barraBusqueda.style.display === '') {
             barraBusqueda.style.display = 'block';
@@ -42,7 +119,7 @@ function abrirVentanaBusqueda() {
         botonCerrar.style.display = 'none';  
         document.body.style.overflow = 'auto';
     });
-}
+}*/
 
 
 function mostrarProductos() {
@@ -64,12 +141,12 @@ function mostrarProductos() {
                 </div>
             `;
         });
-        contenedor.innerHTML = datos;
+        contenedorProductos.innerHTML = datos;
     })
     .catch(err => console.error(err));
 }
 
-function realizarBusqueda() {
+function realizarBusqueda(buscador) {
     const terminoBusqueda = buscador.value.toLowerCase();
     fetch(URL)
         .then(res => res.json())
@@ -80,7 +157,7 @@ function realizarBusqueda() {
             );
 
             if (productosFiltrados.length > 0) {
-                contenedor.innerHTML = ''; // vaciar el contenedor anterior
+                contenedorProductos.innerHTML = ''; // vaciar el contenedor anterior
                 let productos = '';
                 productosFiltrados.forEach(producto => {
                     productos += `
@@ -96,7 +173,7 @@ function realizarBusqueda() {
                         </div>
                     `;
                 });
-                contenedor.innerHTML = productos;
+                contenedorProductos.innerHTML = productos;
             } else {
                 alert('No se encontraron productos');
             }
@@ -117,6 +194,11 @@ function buscarProductoOCategoria() {
             mostrarProductos();
         }
     });
+    buscadorMovil.addEventListener('keyup', function(event){
+        if (event.key === 'Backspace' && buscador.value === '') {
+            mostrarProductos();
+        }
+    });
 }
 
 function main() {
@@ -126,4 +208,4 @@ function main() {
     abrirVentanaBusqueda();
 }
 
-main();
+main()
