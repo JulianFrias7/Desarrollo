@@ -1,3 +1,7 @@
+import { agregarCarrito } from "./carrito.js";
+import { abrirVentanaBusqueda, abrirCerrarVentanaCarrito } from "./busqueda.js";
+import { mostrarProductos, buscarProductoOCategoria } from "./productos.js";
+
 // Declaración de elementos del DOM
 let productos = [];
 let precioProductosCarrito = [];
@@ -6,26 +10,28 @@ const contenedorCarrito = document.getElementById("contenedor_carrito");
 const cerrarVentana = document.querySelector(".cerrar_ventana");
 const lista = document.getElementById("items");
 const totalDeProductos = document.querySelector(".total_productos");
+
+export {productos, precioProductosCarrito, imagenCarrito, contenedorCarrito, cerrarVentana, lista, totalDeProductos};
+
 //para desktop
 const contenedorProductos = document.querySelector(".contenedor_productos"); //donde van los productos
 const buscador = document.querySelector('.buscar_producto') //el input de buscar producto
 const imagenBusqueda = document.querySelector('.img_busqueda') //imagen de busqueda
-
+export {contenedorProductos, buscador, imagenBusqueda}
 //para moviles
 const contenedorBusqueda = document.querySelector('.contenedor_buscador')
 const buscadorMovil= document.querySelector('.buscador')
 const botonBuscar = document.querySelector('.boton_buscar')
 const botonCerrar = document.querySelector('.boton_cerrar')
-//const barraBusqueda = document.querySelector('.buscar_producto')
-//const botonBusqueda = document.querySelector('.boton_buscar')
-//const botonCerrar = document.querySelector('.boton_cerrar')
-
+const barraBusqueda = document.querySelector('.buscar_producto')
+const botonBusqueda = document.querySelector('.boton_buscar')
+export {contenedorBusqueda, buscadorMovil, botonBuscar, botonCerrar, barraBusqueda, botonBusqueda}
 //para moviles
 const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos';
 
 
 
-async function agregarCarrito() {
+/*async function agregarCarrito() {
     const botonesAgregarCarrito = document.querySelectorAll('.agregar_carrito');
     
     botonesAgregarCarrito.forEach(boton => {
@@ -66,13 +72,13 @@ async function agregarCarrito() {
             }
         });
     });
-}
+}*/
 
-function calcularTotal(array){
+/*function calcularTotal(array){
     let total = array.reduce((acumulador, valorActual) => acumulador + valorActual, 0)
     return total
-}   
-async function descontarStock(productoId) {
+}*/   
+/*async function descontarStock(productoId) {
     try {
         const res = await fetch(URL);
         const data = await res.json();
@@ -100,11 +106,11 @@ async function descontarStock(productoId) {
         console.error("Error al descontar el stock:", err);
         return 0; 
     }
-}
+}*/
 
 
 
-function abrirCerrarVentanaCarrito() {
+/*function abrirCerrarVentanaCarrito() {
     imagenCarrito.addEventListener("click", function() {
         contenedorCarrito.style.display = "block";
         document.body.style.overflow = "hidden";
@@ -114,10 +120,10 @@ function abrirCerrarVentanaCarrito() {
         contenedorCarrito.style.display = "none";
         document.body.style.overflow = "auto";
     });
-}
+}*/
 
 
-function abrirVentanaBusqueda() {
+/*function abrirVentanaBusqueda() {
     imagenBusqueda.addEventListener('click', function() {
         if (window.innerWidth < 550) {
             // para moviles
@@ -142,7 +148,7 @@ function abrirVentanaBusqueda() {
     botonBuscar.addEventListener('click', function() {
         realizarBusqueda(buscadorMovil);
     });
-}
+}*/
 
 // evento cuando el tamaño del navegador cambia
 window.addEventListener('resize', function() {
@@ -152,7 +158,7 @@ window.addEventListener('resize', function() {
     }
 });
 
-function mostrarProductos() {
+/*function mostrarProductos() {
     fetch(URL)
     .then(res => res.json())
     .then(data => {
@@ -176,9 +182,9 @@ function mostrarProductos() {
         agregarCarrito();
     })
     .catch(err => console.error(err));
-}
+}*/
 
-function realizarBusqueda(buscador) {
+/*function realizarBusqueda(buscador) {
     const terminoBusqueda = buscador.value.toLowerCase();
     fetch(URL)
         .then(res => res.json())
@@ -212,11 +218,11 @@ function realizarBusqueda(buscador) {
             }
         })
         .catch(err => console.error('Error al buscar productos:', err));
-}
+}*/
 
 
 
-function buscarProductoOCategoria() {
+/*function buscarProductoOCategoria() {
     buscador.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             realizarBusqueda(buscador);
@@ -235,14 +241,14 @@ function buscarProductoOCategoria() {
             descontarStock(productoId);
         }
     });
-}
+}*/
 
 function main() {
-    abrirCerrarVentanaCarrito();
-    mostrarProductos();
+    abrirCerrarVentanaCarrito(); //listo
+    mostrarProductos();//listo
     buscarProductoOCategoria();
-    abrirVentanaBusqueda();
-    agregarCarrito()
+    abrirVentanaBusqueda();//listo
+    agregarCarrito() //listo
 }
 
 main()
