@@ -1,5 +1,12 @@
 import { descontarStock } from "./productos.js";
-import {precioProductosCarrito, imagenCarrito, contenedorCarrito, cerrarVentana, lista, totalDeProductos} from "./app.js"
+//import {imagenCarrito, contenedorCarrito, cerrarVentana, lista, totalDeProductos} from "./app.js"
+let precioProductosCarrito = [];
+const imagenCarrito = document.querySelector(".img_carrito");
+const contenedorCarrito = document.getElementById("contenedor_carrito");
+const cerrarVentana = document.querySelector(".cerrar_ventana");
+const lista = document.getElementById("items");
+const totalDeProductos = document.querySelector(".total_productos");
+let totalTodo = 0
 export async function agregarCarrito() {
     const botonesAgregarCarrito = document.querySelectorAll('.agregar_carrito');
     

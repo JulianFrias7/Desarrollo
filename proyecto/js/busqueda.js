@@ -1,6 +1,14 @@
 
 import { mostrarProductos, realizarBusqueda, descontarStock } from "./productos.js";
-import {buscador, imagenBusqueda, contenedorBusqueda, buscadorMovil, botonBuscar, botonCerrar} from "./app.js"
+//import {buscador, imagenBusqueda, contenedorBusqueda, buscadorMovil, botonBuscar, botonCerrar} from "./app.js"
+const buscador = document.querySelector('.buscar_producto')
+const imagenBusqueda = document.querySelector('.img_busqueda')
+const contenedorBusqueda = document.querySelector('.contenedor_buscador')
+const buscadorMovil= document.querySelector('.buscador')
+const botonBuscar = document.querySelector('.boton_buscar')
+const botonCerrar = document.querySelector('.boton_cerrar')
+//const barraBusqueda = document.querySelector('.buscar_producto')
+//const botonBusqueda = document.querySelector('.boton_buscar')
 export function abrirVentanaBusqueda() {
     imagenBusqueda.addEventListener('click', function() {
         if (window.innerWidth < 550) {

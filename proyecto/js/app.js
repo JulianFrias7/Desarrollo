@@ -1,31 +1,31 @@
-import { agregarCarrito } from "./carrito.js";
-import { abrirVentanaBusqueda, abrirCerrarVentanaCarrito } from "./busqueda.js";
-import { mostrarProductos, buscarProductoOCategoria } from "./productos.js";
+import { agregarCarrito, abrirCerrarVentanaCarrito } from "./carrito.js";
+import { abrirVentanaBusqueda, buscarProductoOCategoria } from "./busqueda.js";
+import { mostrarProductos } from "./productos.js";
 
 // Declaración de elementos del DOM
-let productos = [];
-let precioProductosCarrito = [];
-const imagenCarrito = document.querySelector(".img_carrito");
-const contenedorCarrito = document.getElementById("contenedor_carrito");
-const cerrarVentana = document.querySelector(".cerrar_ventana");
-const lista = document.getElementById("items");
-const totalDeProductos = document.querySelector(".total_productos");
+//let productos = [];
+//let precioProductosCarrito = [];
+//const imagenCarrito = document.querySelector(".img_carrito");
+//const contenedorCarrito = document.getElementById("contenedor_carrito");
+//const cerrarVentana = document.querySelector(".cerrar_ventana");
+//const lista = document.getElementById("items");
+//const totalDeProductos = document.querySelector(".total_productos");
 
-export {productos, precioProductosCarrito, imagenCarrito, contenedorCarrito, cerrarVentana, lista, totalDeProductos};
+//export {productos, imagenCarrito, contenedorCarrito, cerrarVentana, lista, totalDeProductos};
 
 //para desktop
-const contenedorProductos = document.querySelector(".contenedor_productos"); //donde van los productos
-const buscador = document.querySelector('.buscar_producto') //el input de buscar producto
-const imagenBusqueda = document.querySelector('.img_busqueda') //imagen de busqueda
-export {contenedorProductos, buscador, imagenBusqueda}
+//const contenedorProductos = document.querySelector(".contenedor_productos"); //donde van los productos
+//const buscador = document.querySelector('.buscar_producto') //el input de buscar producto
+// const imagenBusqueda = document.querySelector('.img_busqueda') //imagen de busqueda
+// export {contenedorProductos, buscador, imagenBusqueda}
 //para moviles
 const contenedorBusqueda = document.querySelector('.contenedor_buscador')
-const buscadorMovil= document.querySelector('.buscador')
-const botonBuscar = document.querySelector('.boton_buscar')
-const botonCerrar = document.querySelector('.boton_cerrar')
-const barraBusqueda = document.querySelector('.buscar_producto')
-const botonBusqueda = document.querySelector('.boton_buscar')
-export {contenedorBusqueda, buscadorMovil, botonBuscar, botonCerrar, barraBusqueda, botonBusqueda}
+// const buscadorMovil= document.querySelector('.buscador')
+// const botonBuscar = document.querySelector('.boton_buscar')
+// const botonCerrar = document.querySelector('.boton_cerrar')
+// const barraBusqueda = document.querySelector('.buscar_producto')
+// const botonBusqueda = document.querySelector('.boton_buscar')
+// export {contenedorBusqueda, buscadorMovil, botonBuscar, botonCerrar, barraBusqueda, botonBusqueda}
 //para moviles
 const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos';
 
