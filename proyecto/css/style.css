@@ -40,9 +40,10 @@ header{
 .titulo_principal{
     display: flex;
     padding-left: 0px;
-    font-size: 1.2em;
+    font-size: 1em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #1A237E;
+    color: #e7e8ee;
+    font-style: oblique;
 }
 
 .img_perfil, .img_busqueda, .img_carrito{
@@ -133,7 +134,7 @@ header{
 .contenedor_productos{
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 1px;
     background-color: #dfe2f6;
     
 }
@@ -261,6 +262,106 @@ header{
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
+}
+.compra_realizada {
+    display: none;
+    justify-content: center;
+    align-items: center; /* Centrar el botón verticalmente dentro del contenedor */
+    margin-left: auto;
+    margin-top: 0px;
+    width: 100px;
+    height: 40px;
+    background-color: #06D001;
+    border: 1px solid #06D001;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+#boton_compra {
+    width: 100%; /* Hacer que el botón ocupe el 100% del ancho del contenedor */
+    height: 100%; /* Hacer que el botón ocupe el 100% de la altura del contenedor */
+    border: none; /* Opcional: Eliminar bordes del botón */
+    background-color: inherit; /* Opcional: Heredar el color de fondo del contenedor */
+    color: white; /* Cambia el color del texto a blanco */
+    border-radius: 10px; /* Cambiar el cursor a pointer al pasar sobre el botón */
+}
+.contenedor_perfil {
+    display: none;
+    position: fixed; /* Fijo en la pantalla */
+    z-index: 1;
+    background-color: none;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 480px;
+    height: 260px;
+    border-radius: 10px;
+    top: 10px; /* Fijado un poco más abajo del borde superior */
+    left: 50%; /* Fijado al centro horizontalmente */
+    transform: translateX(-50%); /* Centramos el contenedor */
+    margin: 0px 3px; /* Sin margen */ /* Sin padding */
+    margin-top: 70px;
+}
+
+
+.titulo_perfil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #56b3e9;
+    text-align: center;
+    height: 40px;
+    font-size: 23px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.informacion_perfil {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 230px; /* Ajuste de altura */
+}
+
+.informacion_perfil p {
+    width: 50%;
+    height: 100%;
+    background-color: #F5F7F8;
+    margin: 0;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+}
+
+.informacion_perfil div {
+    width: 50%;
+    height: 100%;
+    background-color: #E8F9FD;
+    margin: 0;
+    padding: 10px;
+}
+.informacion_perfil span{
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+    display: block;
+}
+.titulo_perfil span {
+    position: absolute;
+    right: 10px;
+    color: rgb(18, 16, 16);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.titulo_historial{
+    text-align: center;
 }
 @media(width > 550px) {
     .contenedor_buscador{

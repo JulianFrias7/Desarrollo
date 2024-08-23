@@ -1,12 +1,14 @@
 import { descontarStock } from "./productos.js";
 //import {imagenCarrito, contenedorCarrito, cerrarVentana, lista, totalDeProductos} from "./app.js"
 let precioProductosCarrito = [];
+let totalTodo = 0
 const imagenCarrito = document.querySelector(".img_carrito");
 const contenedorCarrito = document.getElementById("contenedor_carrito");
 const cerrarVentana = document.querySelector(".cerrar_ventana");
 const lista = document.getElementById("items");
 const totalDeProductos = document.querySelector(".total_productos");
-let totalTodo = 0
+const botonComprarProductos = document.querySelector("#boton_compra");
+const contenedorBotonCompra = document.querySelector('.compra_realizada')
 export async function agregarCarrito() {
     const botonesAgregarCarrito = document.querySelectorAll('.agregar_carrito');
     
@@ -43,6 +45,7 @@ export async function agregarCarrito() {
                 let totalPrecioParrafo = document.createElement('p');
                 totalPrecioParrafo.textContent = `Total: $${totalTodo}`;
                 totalDeProductos.appendChild(totalPrecioParrafo);
+                contenedorBotonCompra.style.display = 'flex'
                 console.log(productoNombre);
                 console.log(precioProductosCarrito);
             }
@@ -65,4 +68,18 @@ export function abrirCerrarVentanaCarrito() {
         contenedorCarrito.style.display = "none";
         document.body.style.overflow = "auto";
     });
+}
+
+export function comprarProductos(){
+    botonComprarProductos.addEventListener('click', function(){
+        lista.innerHTML = '';
+        totalDeProductos.innerHTML = '';
+        Swal.fire({
+            title: '¡Compra Exitosa!',
+            text: '¡Gracias por su compra!, esta se vera en su perfil',
+            icon: 'success',
+            confirmButtonText: 'Aceptar'
+            });
+        contenedorBotonCompra.style.display = 'none'
+    })
 }

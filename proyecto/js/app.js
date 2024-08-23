@@ -1,7 +1,7 @@
-import { agregarCarrito, abrirCerrarVentanaCarrito } from "./carrito.js";
+import { agregarCarrito, abrirCerrarVentanaCarrito, comprarProductos } from "./carrito.js";
 import { abrirVentanaBusqueda, buscarProductoOCategoria } from "./busqueda.js";
 import { mostrarProductos } from "./productos.js";
-
+import { abrirCerrarVentanaPerfil } from "./perfil.js";
 // Declaración de elementos del DOM
 //let productos = [];
 //let precioProductosCarrito = [];
@@ -249,6 +249,8 @@ function main() {
     buscarProductoOCategoria();
     abrirVentanaBusqueda();//listo
     agregarCarrito() //listo
+    comprarProductos()
+    abrirCerrarVentanaPerfil()
 }
 
 main()
