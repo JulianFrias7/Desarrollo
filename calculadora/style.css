@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F05A7E;
+}
+.contenedor_calculadora{
+    background-color: #FFEAC5;
+    margin: auto;
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "input input input input"
+    "borrar_todo borrar_ultimo division producto"
+    "siete ocho nueve resta"
+    "cuatro cinco seis suma"
+    "uno dos tres calcular_resultado"
+    "cero cero cero calcular_resultado"
+    ;
+    width: 600px;
+    height: 500px;
+    gap: 10px;
+}
+
+.calculos{
+    font-size: 40px;
+    margin-top: 10px;
+    grid-area: input;
+}
+#borrar_todo{
+    grid-area: borrar_todo;
+}
+#borrar_ultimo{
+    grid-area: borrar_ultimo;
+}
+#division{
+    grid-area: division;
+}
+#producto{
+    grid-area: producto;
+}
+#siete{
+    grid-area: siete;
+}
+#ocho{
+    grid-area: ocho;
+}
+#nueve{
+    grid-area: nueve;
+}
+#resta{
+    grid-area: resta;
+}
+#cuatro{
+    grid-area: cuatro;
+}
+#cinco{
+    grid-area: cinco;
+}
+#seis{
+    grid-area: seis;
+}
+#suma{
+    grid-area: suma;
+}
+#uno{
+    grid-area: uno;
+}
+#dos{
+    grid-area: dos;
+}
+#tres{
+    grid-area: tres;
+}
+#calcular_resultado{
+    grid-area: calcular_resultado;
+}
+#cero{
+    grid-area: cero;
+}

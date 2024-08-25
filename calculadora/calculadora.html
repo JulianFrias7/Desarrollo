@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="contenedor_calculadora">
+        <!-- en este input iran los calculos -->
+        <input type="text" name="" value="" readonly class="calculos">
+        <!-- numeros -->
+        <button class="numeros" id="cero">0</button>
+        <button class="numeros" id="uno">1</button>
+        <button class="numeros" id="dos">2</button>
+        <button class="numeros" id="tres">3</button>
+        <button class="numeros" id="cuatro">4</button>
+        <button class="numeros" id="cinco">5</button>
+        <button class="numeros" id="seis">6</button>
+        <button class="numeros" id="siete">7</button>
+        <button class="numeros" id="ocho">8</button>
+        <button class="numeros" id="nueve">9</button>
+        <br>
+        <!-- operaciones aritmeticas -->
+        <button class="operaciones_aritmeticas" id="suma">+</button>
+        <button class="operaciones_aritmeticas" id="resta">-</button>
+        <button class="operaciones_aritmeticas" id="producto">*</button>
+        <button class="operaciones_aritmeticas" id="division">/</button>
+        <br>
+        <!-- borrar -->
+        <button class="botones_borrar" id="borrar_todo">C</button>
+        <button class="botones_borrar" id="borrar_ultimo">CE</button>
+        <br>
+        <!-- resultado -->
+        <button id="calcular_resultado">=</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
