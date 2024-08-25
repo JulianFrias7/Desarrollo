@@ -1,95 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <title>Simulador</title>
+    <title>Simulador de Compras</title>
 </head>
 
 <body>
+    <!-- encabezado de la página -->
     <header class="encabezado">
         <div class="titulo_principal">
             <h1>MERCADO</h1>
         </div>
         <nav>
-            <input type="text" name="nombre_producto" id="" placeholder="Buscar producto o categoria..." class="buscar_producto">
-            <a href="#"><img src="../imagenes/busqueda.png" alt="" class="img_busqueda"></a> 
-            <a href="#"><img src="../imagenes/perfil.png" alt="" class="img_perfil"></a>
-            <a href="#"><img src="../imagenes/carrito.png" alt=""  class="img_carrito"></a>
+            <input type="text" name="nombre_producto" placeholder="Buscar producto o categoría..." class="buscar_producto">
+            <a href="#"><img src="../imagenes/busqueda.png" alt="Buscar" class="img_busqueda"></a>
+            <a href="#"><img src="../imagenes/perfil.png" alt="Perfil" class="img_perfil"></a>
+            <a href="#"><img src="../imagenes/carrito.png" alt="Carrito de compras" class="img_carrito"></a>
         </nav>
     </header>
-    
-    <div class="contenedor_buscador">
-        <div class="contenido_buscador">
-            <input type="text" name="" id="" placeholder="Buscar producto o categoria..." class="buscador">
-            <div class="botones">
-                <button class="boton_buscar">Buscar</button>
-                <button class="boton_cerrar">Cerrar</button>
+
+    <!-- contenido principal de la pagina -->
+    <main>
+        <!-- buscador -->
+        <section class="contenedor_buscador">
+            <div class="contenido_buscador">
+                <input type="text" placeholder="Buscar producto o categoría..." class="buscador">
+                <div class="botones">
+                    <button class="boton_buscar">Buscar</button>
+                    <button class="boton_cerrar">Cerrar</button>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-
-
-
-    <div id="contenedor_carrito" class="carrito">
-        <div class="contenido_carrito">
-            <span class="cerrar_ventana">X</span>
-            <h2>Carrito de Compras</h2>
-            <ul id="items">
-                <!-- productos ingresados -->
-            </ul>
-            <div class="total_productos">
-                <!-- total de productos -->
+        <!-- carrito de compras -->
+        <section class="carrito">
+            <div class="contenido_carrito">
+                <span class="cerrar_ventana">X</span>
+                <h2>Carrito de Compras</h2>
+                <ul id="items">
+                    <!-- productos -->
+                </ul>
+                <div class="total_productos">
+                    <!-- total de productos -->
+                </div>
+                <div class="compra_realizada">
+                    <button id="boton_compra">COMPRAR</button>
+                </div>
             </div>
-            <div class="compra_realizada">
-                <button id="boton_compra">COMPRAR</button>
+        </section>
+
+        <!-- perfil -->
+        <section class="contenedor_perfil">
+            <div class="titulo_perfil">
+                <h4>PERFIL</h4>
+                <span class="cerrar_perfil">X</span>
             </div>
-        </div>
-    </div>
+            <div class="informacion_perfil">
+                <p class="titulo_historial"><span>Historial de compras</span><br>Aquí se mostrarán los productos que vayas comprando, junto con la cantidad de cada uno.</p>
+                <div>
+                    <!-- historial de compras -->
+                </div>
+            </div>
+        </section>
 
+        <!-- presentacion -->
+        <section class="presentacion">
+            <div class="informacion">
+                <h2 class="animate__animated animate__bounce animate__zoomInDown">SIMULADOR DE COMPRAS</h2>
+                <p class="animate__animated animate__bounce animate__zoomIn">
+                    Bienvenido a mi simulador de compras, una herramienta interactiva para ofrecer una experiencia de compra virtual,
+                    explora variedades de productos y agrégalos a tu carrito virtual para simular el proceso de compra =]
+                </p>
+                <button>Ir a mi carrito</button>
+            </div>
+        </section>
 
-
-
-    <div class="contenedor_perfil">
-        <div class="titulo_perfil">
-            <h4>PERFIL</h4>
-            <span class="cerrar_perfil">X</span>
-        </div>
-        <div class="informacion_perfil">
-            <p class="titulo_historial"><span>Historial de compras</span><br>Aquí se mostrarán los productos que vayas comprando, junto con la cantidad de cada uno.</p>
+        <!-- lista de productos -->
+        <section class="productos">
             <div>
-                <!-- historial de compras -->
+                <h3>PRODUCTOS</h3>
             </div>
-            <!-- capital -->
-        </div>
-    </div>
-    
+            <div class="contenedor_productos">
+                <!-- aca van a estar los productos que estan disponible -->
+            </div>
+        </section>
+    </main>
 
-    <section class="presentacion">
-        <div class="fondo_productos">
-            <img src="../imagenes/fondo_compras.png" alt="">
-        </div>
-        <div class="informacion">
-            <h2 class="animate__animated animate__bounce animate__zoomInDown">SIMULADOR DE COMPRAS</h2>
-            <p class="animate__animated animate__bounce animate__zoomIn">
-                Bienvenido a mi simulador de compras, una herramienta interactiva para ofrecer una experiencia de compra virtual,
-                explora variedades de productos y agregalos a tu carrito virtual y simula el proceso de compra =]
-            </p>
-            <button>Ir a mi carrito</button> 
-        </div>
-    </section>
+    <!-- footer -->
+    <footer>
+        <p>&copy; 2024 Mercado. Todos los derechos reservados.</p>
+    </footer>
 
-    <section class="productos">
-        <div>
-            <h3>PRODUCTOS</h3>
-        </div>
-        <div class="contenedor_productos">
-            
-        </div>
-    </section>
     <script src="../js/app.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

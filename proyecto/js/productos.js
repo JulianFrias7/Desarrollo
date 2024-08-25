@@ -1,6 +1,5 @@
 
 import { agregarCarrito } from "./carrito.js";
-//import { productos, contenedorProductos } from "./app.js";
 const contenedorProductos = document.querySelector(".contenedor_productos"); 
 let productos = [];
 const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos';
