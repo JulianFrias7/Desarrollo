@@ -1,12 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+body {
     background-color: #F05A7E;
 }
-.contenedor_calculadora{
+.contenedor_calculadora {
     background-color: #FFEAC5;
     margin: auto;
     margin-top: 100px;
@@ -14,71 +14,107 @@ body{
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: 
-    "input input input input"
-    "borrar_todo borrar_ultimo division producto"
-    "siete ocho nueve resta"
-    "cuatro cinco seis suma"
-    "uno dos tres calcular_resultado"
-    "cero cero cero calcular_resultado"
-    ;
+        "input input input input"
+        "borrar_todo borrar_ultimo division producto"
+        "siete ocho nueve resta"
+        "cuatro cinco seis suma"
+        "uno dos tres calcular_resultado"
+        "cero cero punto calcular_resultado";
     width: 600px;
     height: 500px;
-    gap: 10px;
+    gap: 10px; /* Espacio entre botones */
+    padding: 30px; /* Margen interno del contenedor */
+    border-radius: 10px;
 }
-
-.calculos{
-    font-size: 40px;
-    margin-top: 10px;
+button {
+    width: 100%;
+    font-size: 30px;
+    border-radius: 20px;
+    border: none;
+}
+.calculos {
+    font-size: 55px;
+    height: 90px;
     grid-area: input;
+    margin-top: 10px; /* Ajuste de márgenes */
+    border-radius: 20px;
 }
-#borrar_todo{
+#borrar_todo {
+    color: white;
+    background-color: #674747;
     grid-area: borrar_todo;
 }
-#borrar_ultimo{
+#borrar_ultimo {
+    color: white;
+    background-color: #674747;
     grid-area: borrar_ultimo;
 }
-#division{
+#division {
+    color: white;
+    background-color: #674747;
     grid-area: division;
 }
-#producto{
+#producto {
+    color: white;
+    background-color: #674747;
     grid-area: producto;
 }
-#siete{
+#siete {
+    background-color: #f8f7f6;
     grid-area: siete;
 }
-#ocho{
+#ocho {
+    background-color: #f8f7f6;
     grid-area: ocho;
 }
-#nueve{
+#nueve {
+    background-color: #f8f7f6;
     grid-area: nueve;
 }
-#resta{
+#resta {
+    color: white;
+    background-color: #674747;
     grid-area: resta;
 }
-#cuatro{
+#cuatro {
+    background-color: #f8f7f6;
     grid-area: cuatro;
 }
-#cinco{
+#cinco {
+    background-color: #f8f7f6;
     grid-area: cinco;
 }
-#seis{
+#seis {
+    background-color: #f8f7f6;
     grid-area: seis;
 }
-#suma{
+#suma {
+    color: white;
+    background-color: #674747;
     grid-area: suma;
 }
-#uno{
+#uno {
+    background-color: #f8f7f6;
     grid-area: uno;
 }
-#dos{
+#dos {
+    background-color: #f8f7f6;
     grid-area: dos;
 }
-#tres{
+#tres {
+    background-color: #f8f7f6;
     grid-area: tres;
 }
-#calcular_resultado{
+#calcular_resultado {
+    color: white;
+    background-color: #674747;
     grid-area: calcular_resultado;
 }
-#cero{
+#cero {
+    background-color: #f8f7f6;
     grid-area: cero;
+}
+#punto{
+    background-color: #f8f7f6;
+    grid-area: punto;
 }
