@@ -1,7 +1,8 @@
-import { agregarCarrito, abrirCerrarVentanaCarrito, comprarProductos } from "./carrito.js";
-import { abrirVentanaBusqueda, buscarProductoOCategoria } from "./busqueda.js";
-import { mostrarProductos } from "./productos.js";
-import { abrirCerrarVentanaPerfil } from "./perfil.js";
+//localStorage.clear()
+import { agregarCarrito, abrirCerrarVentanaCarrito, comprarProductos } from "./js/carrito.js";
+import { abrirVentanaBusqueda, buscarProductoOCategoria } from "./js/busqueda.js";
+import { mostrarProductos } from "./js/productos.js";
+import { abrirCerrarVentanaPerfil } from "./js/perfil.js";
 
 const contenedorBusqueda = document.querySelector('.contenedor_buscador')
 const URL = 'https://66c416ebb026f3cc6cedfb5c.mockapi.io/productos';

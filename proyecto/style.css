@@ -60,7 +60,7 @@ header{
         rgba(56, 47, 47, 0.5),
         rgba(73, 71, 71, 0.5)
     ) 
-    ,url("../imagenes/fondo_compras.jpeg");
+    ,url("./imagenes/fondo_compras.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

@@ -20,6 +20,7 @@ export function abrirVentanaBusqueda() {
             contenedorBusqueda.style.display = 'none';
             buscadorMovil.style.display = 'none';
             document.body.style.overflow = 'auto';
+            realizarBusqueda(buscador);
         }
     });
 
