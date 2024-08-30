@@ -14,8 +14,12 @@ window.addEventListener('resize', function() {
         document.body.style.overflow = 'auto';
     }
 });
-
-
+// const compraRealizada = localStorage.getItem('compraRealizada')
+// if (compraRealizada === 'true') {
+//     localStorage.removeItem('precios')
+//     localStorage.removeItem('total')
+// }
+// localStorage.setItem('compraRealizada', 'false');
 function main() {
     abrirCerrarVentanaCarrito(); //listo
     mostrarProductos();//listo
